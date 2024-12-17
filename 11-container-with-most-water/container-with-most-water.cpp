@@ -11,12 +11,7 @@ public:
        {
         left++;
        }
-       else if(height[left]>height[right])
-       {
-        right--;
-       }
        else{
-        left++;
         right--;
        }
        
