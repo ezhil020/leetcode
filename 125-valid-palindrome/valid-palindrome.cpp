@@ -5,7 +5,7 @@ public:
         string r;
         for(int i = 0 ;i<siz ; i++)
         {
-            if(s[i]>=48 && s[i]<=57)
+            if((s[i]>=48 && s[i]<=57)||(s[i]>=97 && s[i]<=122))
             {
                 r+=s[i];
             }
@@ -13,10 +13,6 @@ public:
             {
 
                 r+=s[i]+32;
-            }
-            else if(s[i]>=97 && s[i]<=122)
-            {
-                r+=s[i];
             }
         }
         int left = 0 ,right = r.length()-1;
