@@ -14,13 +14,9 @@ public:
            else{
             
                  merge.push_back({front,back});
-            
-            if(intervals[i+1][0]>back)  
-          {
             front = intervals[i+1][0];
              back = intervals[i+1][1];
-             }
-
+             
            }
         }
                     merge.push_back({front,back});
