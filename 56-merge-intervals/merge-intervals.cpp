@@ -12,10 +12,9 @@ public:
             back  = max(intervals[i+1][1],back);
            }
            else{
-            if(intervals[i+1][1]<=back || intervals[i+1][0]-back >= 1)
-            {
+            
                  merge.push_back({front,back});
-            }
+            
             if(intervals[i+1][0]>back)  
           {
             front = intervals[i+1][0];
