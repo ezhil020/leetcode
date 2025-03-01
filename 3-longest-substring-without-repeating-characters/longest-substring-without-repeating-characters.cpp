@@ -1,31 +1,23 @@
 class Solution {
 public:
-    int lengthOfLongestSubstring(string s)
-     {
-     int j= 0,count=0,len=1,i;
-     if(s.size()==0){
-        return 0;
-     }
-     for( i = 1 ;i<s.size();i++)
-        {
-            count = j;
-            while(count < i)
-        {
-               if( s[i]!=s[count] )
-            {  
-                 count++;
+    int lengthOfLongestSubstring(string s) {
+        int count=0 ,i=0,j=0,base = 0,maximum = 0 ;
+        for(int i = 0 ; i<s.size();i++){
+            count = 0;
+            for(j = base;j<i;j++){
+                 if(s[j]!=s[i]){
+                    count++;
+                 }
+                 else{
+                    base = j+1;
+                    break;
+                 }
+
             }
-            else{
-                break;
-            }
+          maximum = max(maximum,count+1);
+
         }
-               if(count<i){
-                len = max(len,(i-j));
-                j=count+1;
-                }
-            
+        
+        return maximum;
         }
-        return max(len,i-j);
-    }
-    
 };
