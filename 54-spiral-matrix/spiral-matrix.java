@@ -6,7 +6,7 @@ class Solution {
         int right = matrix[0].length -1;
         while(top<=bottom && left <= right){
             for(int i = left ;i<=right;i++){
-                res.add(matrix[left][i]);
+                res.add(matrix[top][i]);
                 
             }
             top++;
